@@ -1,0 +1,128 @@
+seo:
+  title: DevBlocks – Reusable UI Blocks for JavaScript Frameworks
+  description: Build faster with reusable UI blocks and layouts for modern JavaScript frameworks. Copy, paste, and ship beautiful interfaces in minutes.
+title: Build Faster with DevBlocks
+description: Reusable UI blocks and layouts for every JavaScript framework. Copy, paste, and ship beautiful interfaces in minutes.
+
+hero:
+  links:
+    - label: Explore Blocks
+      icon: i-lucide-arrow-right
+      trailing: true
+      color: primary
+      to: "#features"
+      size: xl
+    - label: GitHub
+      icon: i-simple-icons-github
+      size: xl
+      color: neutral
+      variant: outline
+      to: "#"
+      target: \_blank
+
+  section:
+    title: "[Design once]{.text-primary}, reuse everywhere"
+    description: DevBlocks helps you skip repetitive UI work by providing reusable, framework-friendly blocks and layouts built for real-world projects.
+    images:
+      mobile: /images/devblocks-mobile.svg
+      desktop: /images/devblocks-desktop.svg
+    features:
+      - title: Copy-paste ready
+        description: Drop components directly into your project with zero setup.
+        class: border-l border-primary pl-4
+      - title: Layouts that scale
+        description: From landing pages to dashboards, blocks adapt to your needs.
+        class: border-l border-default pt-4 pl-4
+      - title: Developer-first design
+        description: Clean structure, readable markup, and easy customization.
+        class: border-l border-default pt-4 pl-4
+
+  features:
+    title: Built for [modern developers]{.text-primary}
+    description: Everything you need to build interfaces faster without sacrificing quality.
+    features:
+      - title: Reusable UI Blocks
+        description: Buttons, cards, navbars, forms, and more.
+        icon: i-lucide-box
+      - title: Full Page Layouts
+        description: Ready-made sections and complete layouts.
+        icon: i-lucide-layout-template
+      - title: Framework Friendly
+        description: Designed to work smoothly across JavaScript frameworks.
+        icon: i-lucide-code
+      - title: Responsive by Default
+        description: Mobile-first and fully responsive layouts.
+        icon: i-lucide-smartphone
+      - title: Easy Customization
+        description: Minimal styling that’s easy to extend.
+        icon: i-lucide-sliders
+      - title: Fast Prototyping
+        description: Turn ideas into UI in minutes.
+        icon: i-lucide-zap
+
+  steps:
+    title: Build interfaces in [3 steps]{.text-primary}
+    description: Go from idea to UI without friction.
+    items:
+      - title: Browse
+        description: Explore UI blocks and layouts curated for real-world use cases.
+        image:
+          light: /images/light/explore.svg
+          dark: /images/dark/explore.svg
+      - title: Copy
+        description: Copy the block you need and drop it directly into your project.
+        image:
+          light: /images/light/copy.svg
+          dark: /images/dark/copy.svg
+      - title: Ship
+        description: Customize quickly and ship polished interfaces faster.
+        image:
+          light: /images/light/ship.svg
+          dark: /images/dark/ship.svg
+
+  pricing:
+    title: Simple and [developer-friendly]{.text-primary}
+    description: Built for personal projects, learning, and rapid prototyping.
+    plans:
+      - title: Personal Use
+        description: Ideal for side projects and experiments.
+        price: Free
+        highlight: true
+        features:
+          - Access to all UI blocks
+          - Copy-paste layouts
+          - Responsive design
+          - Personal projects only
+        button:
+          label: Get started
+          color: primary
+          to: "#"
+
+  testimonials:
+    title: Loved by [developers]{.text-primary}
+    description: Built to solve everyday frontend pain points.
+    items:
+      - quote: DevBlocks saves me hours every time I start a new project.
+        user:
+          name: Indie Developer
+          description: Side Projects
+      - quote: Clean UI blocks that actually make sense.
+        user:
+          name: Frontend Student
+          description: Learning Nuxt & Vue
+      - quote: Perfect for prototyping and personal tools.
+        user:
+          name: Solo Builder
+          description: Personal Use
+
+  cta:
+    title: Start building with DevBlocks
+    description: Reuse UI. Move faster. Build better.
+    links:
+      - label: Browse Blocks
+        to: "#features"
+        trailingIcon: i-lucide-arrow-right
+      - label: GitHub
+        to: "#"
+        variant: subtle
+        icon: i-simple-icons-github
