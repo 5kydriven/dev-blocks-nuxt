@@ -1,14 +1,14 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData("index", () =>
-  queryCollection("content").first()
-);
+const { data: page } = await useAsyncData('index', () =>
+  queryCollection('content').first(),
+)
 
 if (!page.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: "Page not found",
+    statusMessage: 'Page not found',
     fatal: true,
-  });
+  })
 }
 
 useSeoMeta({
@@ -16,7 +16,7 @@ useSeoMeta({
   ogTitle: page.value.seo?.title || page.value.title,
   description: page.value.seo?.description || page.value.description,
   ogDescription: page.value.seo?.description || page.value.description,
-});
+})
 </script>
 
 <template>
@@ -32,11 +32,18 @@ useSeoMeta({
       </p>
 
       <div class="mt-10 flex justify-center gap-4">
-        <UButton size="xl" trailing-icon="i-lucide-arrow-right">
+        <UButton
+          size="xl"
+          trailing-icon="i-lucide-arrow-right"
+        >
           Explore Blocks
         </UButton>
 
-        <UButton size="xl" variant="outline" icon="i-simple-icons-github">
+        <UButton
+          size="xl"
+          variant="outline"
+          icon="i-simple-icons-github"
+        >
           GitHub
         </UButton>
       </div>
@@ -55,21 +62,27 @@ useSeoMeta({
 
         <ul class="mt-8 space-y-6">
           <li class="border-l-2 border-primary pl-4">
-            <h3 class="font-medium">Copy-paste ready</h3>
+            <h3 class="font-medium">
+              Copy-paste ready
+            </h3>
             <p class="text-sm text-muted">
               Drop components directly into your project with zero setup.
             </p>
           </li>
 
           <li class="border-l-2 border-default pl-4">
-            <h3 class="font-medium">Layouts that scale</h3>
+            <h3 class="font-medium">
+              Layouts that scale
+            </h3>
             <p class="text-sm text-muted">
               From landing pages to dashboards, blocks adapt to your needs.
             </p>
           </li>
 
           <li class="border-l-2 border-default pl-4">
-            <h3 class="font-medium">Developer-first design</h3>
+            <h3 class="font-medium">
+              Developer-first design
+            </h3>
             <p class="text-sm text-muted">
               Clean structure, readable markup, and easy customization.
             </p>
@@ -134,8 +147,12 @@ useSeoMeta({
             <UIcon :name="item.icon" />
           </template>
 
-          <h3 class="font-medium">{{ item.title }}</h3>
-          <p class="text-sm text-muted">{{ item.desc }}</p>
+          <h3 class="font-medium">
+            {{ item.title }}
+          </h3>
+          <p class="text-sm text-muted">
+            {{ item.desc }}
+          </p>
         </UCard>
       </div>
     </section>
@@ -145,24 +162,36 @@ useSeoMeta({
         Build interfaces in <span class="text-primary">3 steps</span>
       </h2>
 
-      <p class="mt-4 text-muted">Go from idea to UI without friction.</p>
+      <p class="mt-4 text-muted">
+        Go from idea to UI without friction.
+      </p>
 
       <div class="mt-12 grid md:grid-cols-3 gap-8">
         <UCard>
-          <h3 class="font-medium">Browse</h3>
-          <p class="text-sm text-muted">Explore UI blocks and layouts.</p>
+          <h3 class="font-medium">
+            Browse
+          </h3>
+          <p class="text-sm text-muted">
+            Explore UI blocks and layouts.
+          </p>
         </UCard>
 
         <UCard>
-          <h3 class="font-medium">Copy</h3>
+          <h3 class="font-medium">
+            Copy
+          </h3>
           <p class="text-sm text-muted">
             Copy the code and paste it into your project.
           </p>
         </UCard>
 
         <UCard>
-          <h3 class="font-medium">Ship</h3>
-          <p class="text-sm text-muted">Customize and ship faster than ever.</p>
+          <h3 class="font-medium">
+            Ship
+          </h3>
+          <p class="text-sm text-muted">
+            Customize and ship faster than ever.
+          </p>
         </UCard>
       </div>
     </section>
@@ -172,14 +201,23 @@ useSeoMeta({
         Start building with <span class="text-primary">DevBlocks</span>
       </h2>
 
-      <p class="mt-4 text-muted">Reuse UI. Move faster. Build better.</p>
+      <p class="mt-4 text-muted">
+        Reuse UI. Move faster. Build better.
+      </p>
 
       <div class="mt-8 flex justify-center gap-4">
-        <UButton size="lg" trailing-icon="i-lucide-arrow-right">
+        <UButton
+          size="lg"
+          trailing-icon="i-lucide-arrow-right"
+        >
           Browse Blocks
         </UButton>
 
-        <UButton size="lg" variant="subtle" icon="i-simple-icons-github">
+        <UButton
+          size="lg"
+          variant="subtle"
+          icon="i-simple-icons-github"
+        >
           GitHub
         </UButton>
       </div>

@@ -9,5 +9,14 @@
 	"tailwindCSS.experimental.classRegex": [
 		["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
 	],
-	"eslint.useFlatConfig": true
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
+	"editor.formatOnSave": true,
+	"prettier.trailingComma": "all",
+	"prettier.bracketSameLine": false,
+	"prettier.useTabs": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
