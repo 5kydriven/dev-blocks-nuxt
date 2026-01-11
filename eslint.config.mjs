@@ -8,6 +8,7 @@ export default withNuxt([
 		rules: {
 			'@typescript-eslint/no-explicit-any': 'warn',
 			'@typescript-eslint/no-unused-vars': 'warn',
+			'@typescript-eslint/no-empty-object-type': 'off',
 
 			// stylistic
 			'@stylistic/no-tabs': 'off',
@@ -19,6 +20,7 @@ export default withNuxt([
 			'@stylistic/arrow-parens': 'off',
 			'@stylistic/quote-props': 'off',
 			'@stylistic/quotes': 'off',
+			'@stylistic/member-delimiter-style': 'off',
 
 			// vue
 			'vue/html-indent': 'off',
