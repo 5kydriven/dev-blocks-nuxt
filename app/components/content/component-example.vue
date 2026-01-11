@@ -92,53 +92,53 @@
 
 	const camelName = camelCase(props.name);
 
-	const data = await fetchComponentExample(camelName);
+	// const data = await fetchComponentExample(camelName);
 
 	const componentProps = reactive({ ...(props.props || {}) });
 
-	const code = computed(() => {
-		let code = '';
+	// 	const code = computed(() => {
+	// 		let code = '';
 
-		if (props.collapse) {
-			code += `::code-collapse
-`;
-		}
+	// 		if (props.collapse) {
+	// 			code += `::code-collapse
+	// `;
+	// 		}
 
-		code += `\`\`\`${props.lang} ${props.preview ? '' : ` [${props.filename ?? data.pascalName}.${props.lang}]`}${props.highlights?.length ? `{${props.highlights.join('-')}}` : ''}
-${data?.code ?? ''}
-\`\`\``;
+	// 		code += `\`\`\`${props.lang} ${props.preview ? '' : ` [${props.filename ?? data.pascalName}.${props.lang}]`}${props.highlights?.length ? `{${props.highlights.join('-')}}` : ''}
+	// ${data?.code ?? ''}
+	// \`\`\``;
 
-		if (props.collapse) {
-			code += `
-::`;
-		}
+	// 		if (props.collapse) {
+	// 			code += `
+	// ::`;
+	// 		}
 
-		return code;
-	});
+	// 		return code;
+	// 	});
 
-	const { data: ast } = await useAsyncData(
-		`component-example-${camelName}${hash({ props: componentProps, collapse: props.collapse })}`,
-		async () => {
-			if (!props.prettier) {
-				return parseMarkdown(code.value);
-			}
+	// 	const { data: ast } = await useAsyncData(
+	// 		`component-example-${camelName}${hash({ props: componentProps, collapse: props.collapse })}`,
+	// 		async () => {
+	// 			if (!props.prettier) {
+	// 				return parseMarkdown(code.value);
+	// 			}
 
-			let formatted = '';
-			try {
-				formatted = await $prettier.format(code.value, {
-					trailingComma: 'none',
-					semi: false,
-					singleQuote: true,
-					printWidth: 100,
-				});
-			} catch {
-				formatted = code.value;
-			}
+	// 			let formatted = '';
+	// 			try {
+	// 				formatted = await $prettier.format(code.value, {
+	// 					trailingComma: 'none',
+	// 					semi: false,
+	// 					singleQuote: true,
+	// 					printWidth: 100,
+	// 				});
+	// 			} catch {
+	// 				formatted = code.value;
+	// 			}
 
-			return parseMarkdown(formatted);
-		},
-		{ watch: [code] },
-	);
+	// 			return parseMarkdown(formatted);
+	// 		},
+	// 		{ watch: [code] },
+	// 	);
 
 	const optionsValues = ref(
 		props.options?.reduce(
@@ -303,12 +303,12 @@ ${data?.code ?? ''}
 			>
 				<slot name="code" />
 			</div>
-			<MDCRenderer
+			<!-- <MDCRenderer
 				v-else-if="ast"
 				:body="ast.body"
 				:data="ast.data"
 				class="[&_pre]:!rounded-t-none [&_div.my-5]:!mt-0"
-			/>
+			/> -->
 		</template>
 	</div>
 </template>

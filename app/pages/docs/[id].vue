@@ -1,12 +1,5 @@
-<script setup lang="ts">
-	import ComponentExample from '~/components/content/component-example.vue';
-</script>
+<script setup lang="ts"></script>
 
 <template>
-	<ComponentExample
-		name="header-example"
-		:overflow-hidden="true"
-		:collapse="true"
-		:prettier="true"
-	/>
+	<TerminalCommand />
 </template>
